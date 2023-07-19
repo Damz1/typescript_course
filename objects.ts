@@ -63,3 +63,24 @@ const mySong: Song = {
 };
 
 calculatePayout(mySong);
+
+//optional properties
+type Point2 = {
+  x: number;
+  y: number;
+  z?: number; // add ? to make a property optional
+};
+const myPoint: Point = { x: 1, y: 3 };
+
+//read only
+
+type User = {
+  readonly id: number;
+  username: string;
+};
+
+const user: User = {
+  id: 128323,
+  username: "abc",
+};
+// user.id = 34 ; won't update becuase it is read only
