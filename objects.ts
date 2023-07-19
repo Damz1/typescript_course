@@ -84,3 +84,31 @@ const user: User = {
   username: "abc",
 };
 // user.id = 34 ; won't update becuase it is read only
+
+//---------------------------------------------------------------------------//
+
+// intersection Types
+type Circle = {
+  radius: number;
+};
+
+type Colorful = {
+  color: string;
+};
+
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace: ColorfulCircle = {
+  radius: 4,
+  color: "yellow",
+};
+
+type Cat = {
+  numLives: number;
+};
+
+type Dog = {
+  breed: string;
+};
+
+type CatDog = Cat & Dog & { age: number }; //will create a combination of cat, dog and a new property of age
